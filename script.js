@@ -50,7 +50,7 @@ function handleNumber(number) {
   //   mainDisplay.textContent = currentOperand;
   // }
 
-  if (currentOperand[0] === '0') {
+  if (currentOperand[0] === '0' && currentOperand[1] !== '.'){
       mainDisplay.textContent = currentOperand;
   }else if (currentOperand.length <= 10) {
       currentOperand += number;
