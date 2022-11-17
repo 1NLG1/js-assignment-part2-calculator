@@ -45,9 +45,16 @@ function handleNumber(number) {
     previousOperand = "";
     mainDisplay.textContent = currentOperand;
   }
-  if (currentOperand.length <= 10) {
-    currentOperand += number;
-    mainDisplay.textContent = currentOperand;
+  // if (currentOperand.length <= 10) {
+  //   currentOperand += number;
+  //   mainDisplay.textContent = currentOperand;
+  // }
+
+  if (currentOperand[0] === '0') {
+      mainDisplay.textContent = currentOperand;
+  }else if (currentOperand.length <= 10) {
+      currentOperand += number;
+      mainDisplay.textContent = currentOperand;
   }
 }
 
